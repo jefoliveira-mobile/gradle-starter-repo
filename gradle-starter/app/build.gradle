@@ -3,7 +3,12 @@ plugins {
 }
 
 group = 'org.example'
-version = 'unspecified'
+version = '1.0-SNAPTSHOT'
+
+tasks.register('run', JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'org.example.Main'
+}
 
 repositories {
     mavenCentral()
