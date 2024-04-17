@@ -6,3 +6,5 @@
  */
 
 rootProject.name = 'gradle-starter'
+include 'app'
+
