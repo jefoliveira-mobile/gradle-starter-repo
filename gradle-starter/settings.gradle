@@ -7,4 +7,6 @@
 
 rootProject.name = 'gradle-starter'
 include 'app'
-
+println("Executando o Settings.gradle")
+println(rootProject.name)
+println("Fim da configuração do projeto")

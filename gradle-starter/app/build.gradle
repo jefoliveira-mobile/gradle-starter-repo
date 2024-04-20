@@ -12,7 +12,18 @@ tasks.register('run', JavaExec) {
         args project.runType.split(',')
     }
 }
+println("BUILD SCRIPT: É executado durante a fase de configuração")
 
+tasks.register("task1") {
+    println("TASK1: É executado durante a fase de configuração")
+    doFirst {
+        println("TASK1: Em fase de execução!")
+    }
+}
+
+tasks.register("task2") {
+    println("TASK2: É executado durante a fase de configuração")
+}
 repositories {
     mavenCentral()
 }
