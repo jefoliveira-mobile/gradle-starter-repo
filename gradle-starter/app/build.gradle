@@ -8,6 +8,9 @@ version = '1.0-SNAPTSHOT'
 tasks.register('run', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'org.example.Main'
+    if (project.hasProperty("runType")) {
+        args project.runType.split(',')
+    }
 }
 
 repositories {
